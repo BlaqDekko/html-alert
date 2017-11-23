@@ -21,7 +21,7 @@ def routine():
     if "Offline" in status:
         print('Not Online')
     else:
-        slack = Slacker('xoxp-273626192374-272795003300-273453876133-e9eee4f6111fdcc1fc1ea1258fe99301')
+        slack = Slacker('<INSERT SLACK TOKEN HERE>')
         slack.chat.post_message('#luke_thomas_detector', 'Luke is Online!')
         print status
         scheduler.remove_job('routine')
