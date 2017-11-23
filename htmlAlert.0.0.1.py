@@ -13,8 +13,7 @@ h.setFormatter(fmt)
 log.addHandler(h)
 
 def routine():
-    page = requests.get('http://steamcommunity.com/id/rrapetor')
-    #page = requests.get('http://steamcommunity.com/id/BlaqDekko')
+    page = requests.get('<INSERT STEAM COMMUNITY ID PAGE HERE>')
     tree = html.fromstring(page.content)
     status = str(tree.xpath('/html/body/div[1]/div[7]/div[2]/div/div[2]/\
     div/div[1]/div[1]/div/div[1]/text()'))
@@ -29,8 +28,8 @@ def routine():
         #scheduler.add_job(routine2, 'interval', seconds=15, id='routine2')
 
 def routine2():
-	page = requests.get('http://steamcommunity.com/id/rrapetor')
-	#page = requests.get('http://steamcommunity.com/id/BlaqDekko')
+
+        page = requests.get('<INSERT STEAM COMMUNITY ID PAGE HERE>')
 	tree = html.fromstring(page.content)
 	status = str(tree.xpath('/html/body/div[1]/div[7]/div[2]/div/div[2]/\
 	div/div[1]/div[1]/div/div[1]/text()'))
